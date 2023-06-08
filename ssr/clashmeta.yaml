@@ -39,7 +39,7 @@ proxies:
   down: 55
 - name: 洛杉矶5
   type: hysteria
-  server: 104.149.153.91
+  server: 108.181.23.83
   port: 10802
   sni: www.microsoft.com
   skip-cert-verify: true
@@ -63,7 +63,7 @@ proxies:
   down: 55
 - name: 洛杉矶2
   type: hysteria
-  server: 104.149.148.219
+  server: 108.181.23.161
   port: 34753
   sni: www.paypal.com
   skip-cert-verify: true
@@ -75,7 +75,7 @@ proxies:
   down: 55
 - name: 洛杉矶6
   type: hysteria
-  server: 104.149.155.29
+  server: 108.181.24.45
   port: 13150
   sni: www.amazon.com
   skip-cert-verify: true
