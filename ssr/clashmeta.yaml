@@ -61,18 +61,18 @@ proxies:
   auth_str: 3dfFiSw04wSzShODercubpxjOMoKV3zElm8e0QqD6pDR1Bvepg
   up: 11
   down: 55
-- name: 洛杉矶2
+- name: 洛杉矶5
   type: hysteria
-  server: 108.181.23.161
-  port: 34753
-  sni: www.paypal.com
+  server: 108.181.23.83
+  port: 10802
+  sni: www.microsoft.com
   skip-cert-verify: true
   alpn:
   - h3
   protocol: udp
-  auth_str: sWZ27pSm6mZb9MiFmde4dSNyBToBd02UTm2RgrZJfFDkhSSZWU
+  auth_str: Ryr93NBZcQneXUrlB9MX6RR414GPrsgJLHcecA9X6z0sazuHVC
   up: 11
-  down: 55
+  down: 88
 - name: 洛杉矶6
   type: hysteria
   server: 108.181.24.45
@@ -93,7 +93,7 @@ proxy-groups:
   - 洛杉矶3
   - 洛杉矶5
   - 洛杉矶4
-  - 洛杉矶2
+  - 洛杉矶5
   - 洛杉矶6
   url: 
   interval: 0
