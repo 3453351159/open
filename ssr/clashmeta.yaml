@@ -52,13 +52,13 @@ proxies:
 - name: 洛杉矶4
   type: hysteria
   server: 167.160.91.115
-  port: 18451
-  sni: www.microsoft.com
+  port: 13928
+  sni: paypal.com
   skip-cert-verify: true
   alpn:
   - h3
   protocol: udp
-  auth_str: 3dfFiSw04wSzShODercubpxjOMoKV3zElm8e0QqD6pDR1Bvepg
+  auth_str: BF0LL4L2jlqSdW3KxjQv81AiFFjj90vWRHeUoqUuTVPeDAGvq3
   up: 11
   down: 55
 - name: 洛杉矶6
