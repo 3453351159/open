@@ -25,6 +25,18 @@ proxies:
   auth_str: dongadlkdjafidjdfaodfadfdf
   up: 11
   down: 55
+- name: 洛杉矶3
+  type: hysteria
+  server: 167.160.90.251
+  port: 57058
+  sni: www.microsoft.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: kZhIP6IGCQqqvp9a3Ym7JnMHjH9OkpqfmiaPHJauCvrsTHqsE8
+  up: 11
+  down: 55
 - name: 洛杉矶5
   type: hysteria
   server: 108.181.23.83
@@ -37,12 +49,39 @@ proxies:
   auth_str: Ryr93NBZcQneXUrlB9MX6RR414GPrsgJLHcecA9X6z0sazuHVC
   up: 11
   down: 88
+- name: 洛杉矶4
+  type: hysteria
+  server: 167.160.91.115
+  port: 13928
+  sni: paypal.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: BF0LL4L2jlqSdW3KxjQv81AiFFjj90vWRHeUoqUuTVPeDAGvq3
+  up: 11
+  down: 55
+- name: 洛杉矶6
+  type: hysteria
+  server: 108.181.24.45
+  port: 13150
+  sni: www.amazon.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: BZsZtkDdcVqYq6UXqADVNLIrPIMCpBcAeYpspfJk1KJrVxgkxq
+  up: 11
+  down: 55
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - 洛杉矶1
+  - 洛杉矶3
   - 洛杉矶5
+  - 洛杉矶4
+  - 洛杉矶6
   url: 
   interval: 0
   tolerance: 0
