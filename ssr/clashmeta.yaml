@@ -40,13 +40,13 @@ proxies:
 - name: 洛杉矶5
   type: hysteria
   server: 108.181.23.83
-  port: 10802
+  port: 41606
   sni: www.microsoft.com
   skip-cert-verify: true
   alpn:
   - h3
   protocol: udp
-  auth_str: Ryr93NBZcQneXUrlB9MX6RR414GPrsgJLHcecA9X6z0sazuHVC
+  auth_str: KFGQB3TrwD4lQGufqgu3ZJJoceWf62ds9bwwVByZbJpw4pLSNe
   up: 11
   down: 88
 - name: 洛杉矶6
