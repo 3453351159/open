@@ -25,42 +25,6 @@ proxies:
   auth_str: Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F
   up: 11
   down: 55
-- name: 洛杉矶2
-  type: hysteria
-  server: 167.160.90.251
-  port: 41592
-  sni: www.microsoft.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: sASVcZfY5PIajKYXdRgtYyQfj8CKSSGP4kYQ6Omxb8ADSXyXcn
-  up: 11
-  down: 55
-- name: 洛杉矶3
-  type: hysteria
-  server: 108.181.23.83
-  port: 41606
-  sni: www.microsoft.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: KFGQB3TrwD4lQGufqgu3ZJJoceWf62ds9bwwVByZbJpw4pLSNe
-  up: 11
-  down: 88
-- name: 洛杉矶4
-  type: hysteria
-  server: 45.144.2.120
-  port: 15664
-  sni: www.microsoft.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: PeYEmeEWVl3DrbPRShVE7U4s88iI6OI1ztNNKE8AA8QxJMxKZ8
-  up: 11
-  down: 55
 - name: 洛杉矶5
   type: hysteria
   server: 45.129.2.6
@@ -71,6 +35,18 @@ proxies:
   - h3
   protocol: udp
   auth_str: 4ILI5uU7ipN4abcPFe3GVhgtDJyNBgBXFhzwCSi9SvU8vCLVt5
+  up: 11
+  down: 55
+- name: 洛杉矶4
+  type: hysteria
+  server: 45.144.2.120
+  port: 15664
+  sni: www.microsoft.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: PeYEmeEWVl3DrbPRShVE7U4s88iI6OI1ztNNKE8AA8QxJMxKZ8
   up: 11
   down: 55
 - name: 洛杉矶6
@@ -90,10 +66,8 @@ proxy-groups:
   type: select
   proxies:
   - 洛杉矶1
-  - 洛杉矶2
-  - 洛杉矶3
-  - 洛杉矶4
   - 洛杉矶5
+  - 洛杉矶4
   - 洛杉矶6
   url: 
   interval: 0
