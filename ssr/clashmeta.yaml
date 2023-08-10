@@ -37,6 +37,18 @@ proxies:
   auth_str: 4ILI5uU7ipN4abcPFe3GVhgtDJyNBgBXFhzwCSi9SvU8vCLVt5
   up: 11
   down: 55
+- name: 洛杉矶3
+  type: hysteria
+  server: 108.181.23.83
+  port: 27467
+  sni: www.microsoft.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  auth_str: WcBGYCNrIouuzYj1VtBNjnmB3uaTXd89HJZ1CP1t2n48gMwsGu
+  up: 11
+  down: 55
 - name: 洛杉矶4
   type: hysteria
   server: 45.144.2.120
@@ -67,6 +79,7 @@ proxy-groups:
   proxies:
   - 洛杉矶1
   - 洛杉矶5
+  - 洛杉矶3
   - 洛杉矶4
   - 洛杉矶6
   url: 
