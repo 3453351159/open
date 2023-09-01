@@ -15,7 +15,7 @@ dns:
 proxies:
 - name: 洛杉矶1
   type: hysteria
-  server: 173.234.25.51
+  server: 173.234.25.54
   port: 20164
   sni: www.microsoft.com
   skip-cert-verify: true
@@ -28,49 +28,49 @@ proxies:
 - name: 洛杉矶5
   type: hysteria
   server: 45.129.2.6
-  port: 39381
+  port: 55594
   sni: www.microsoft.com
   skip-cert-verify: true
   alpn:
   - h3
   protocol: udp
-  auth_str: 4ILI5uU7ipN4abcPFe3GVhgtDJyNBgBXFhzwCSi9SvU8vCLVt5
+  auth_str: FqdeTUFwzKFaNenWDZZ0umHhLpKjylDOYnJbFXxYcLSimpiXXv
   up: 11
   down: 55
 - name: 洛杉矶3
   type: hysteria
   server: 108.181.23.83
-  port: 27467
+  port: 22011
   sni: www.microsoft.com
   skip-cert-verify: true
   alpn:
   - h3
   protocol: udp
-  auth_str: WcBGYCNrIouuzYj1VtBNjnmB3uaTXd89HJZ1CP1t2n48gMwsGu
+  auth_str: HKWhOnD9cW8OvzrnrdkNmrRsES1SEaFeWVOTy2k7oW2j5SHjJd
   up: 11
   down: 55
 - name: 洛杉矶4
   type: hysteria
   server: 45.144.2.120
-  port: 15664
+  port: 22927
   sni: www.microsoft.com
   skip-cert-verify: true
   alpn:
   - h3
   protocol: udp
-  auth_str: PeYEmeEWVl3DrbPRShVE7U4s88iI6OI1ztNNKE8AA8QxJMxKZ8
+  auth_str: JF51WOKgLaXxQK1K8h4fJNJaaGWLb78VJzuzH3jL42qk43k71i
   up: 11
   down: 55
 - name: 洛杉矶6
   type: hysteria
   server: 108.181.24.45
-  port: 13150
+  port: 55514
   sni: www.amazon.com
   skip-cert-verify: true
   alpn:
   - h3
   protocol: udp
-  auth_str: BZsZtkDdcVqYq6UXqADVNLIrPIMCpBcAeYpspfJk1KJrVxgkxq
+  auth_str: Fx1FClF424mA0gLBqgDiaqVQewDGugLF1chvtemdd1CDfrGLxk
   up: 11
   down: 55
 proxy-groups:
