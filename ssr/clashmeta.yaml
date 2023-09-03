@@ -28,49 +28,49 @@ proxies:
 - name: 洛杉矶5
   type: hysteria
   server: 45.129.2.6
-  port: 55594
-  sni: www.microsoft.com
+  port: 12114
+  sni: qq.com
   skip-cert-verify: true
   alpn:
   - h3
   protocol: udp
-  auth_str: FqdeTUFwzKFaNenWDZZ0umHhLpKjylDOYnJbFXxYcLSimpiXXv
+  auth_str: Bs3gtsiZFL96GHA6Gayttp0NA0kaVe8bmhWLRK8OYpmGfNvg3U
   up: 11
   down: 55
 - name: 洛杉矶3
   type: hysteria
   server: 108.181.23.83
-  port: 22011
-  sni: www.microsoft.com
+  port: 14260
+  sni: wechat.com
   skip-cert-verify: true
   alpn:
   - h3
-  protocol: udp
-  auth_str: HKWhOnD9cW8OvzrnrdkNmrRsES1SEaFeWVOTy2k7oW2j5SHjJd
+  protocol: wechat-video
+  auth_str: k6EAVOQ08HUjuJXGlOO0O0EgqqSkkFnqa2WmhNfFparutHWxhs
   up: 11
   down: 55
 - name: 洛杉矶4
   type: hysteria
   server: 45.144.2.120
-  port: 22927
-  sni: www.microsoft.com
+  port: 32721
+  sni: microsoft.com
   skip-cert-verify: true
   alpn:
   - h3
-  protocol: udp
-  auth_str: JF51WOKgLaXxQK1K8h4fJNJaaGWLb78VJzuzH3jL42qk43k71i
+  protocol: wechat-video
+  auth_str: ybgSlsdfe8tI42fAhLp3J0ej8G08D3NIYBFQ16ZvvctUoxZUxD
   up: 11
   down: 55
 - name: 洛杉矶6
   type: hysteria
   server: 108.181.24.45
-  port: 55514
-  sni: www.amazon.com
+  port: 45705
+  sni: wechat.com
   skip-cert-verify: true
   alpn:
   - h3
-  protocol: udp
-  auth_str: Fx1FClF424mA0gLBqgDiaqVQewDGugLF1chvtemdd1CDfrGLxk
+  protocol: wechat-video
+  auth_str: s9gPEwSmIg2wkTi28kz7zHWaE1FSMs2RtI0doiIJXMPi274FJB
   up: 11
   down: 55
 proxy-groups:
