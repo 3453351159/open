@@ -25,50 +25,11 @@ proxies:
   auth_str: qyMvbDyzkIdgRnzYTmP6mLIP1zfCSRoHSNPgCro0aeT5WUPy6e
   up: 11
   down: 55
-- name: 洛杉矶5
-  type: hysteria
-  server: 45.129.2.6
-  port: 12114
-  sni: qq.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: Bs3gtsiZFL96GHA6Gayttp0NA0kaVe8bmhWLRK8OYpmGfNvg3U
-  up: 11
-  down: 55
-- name: 洛杉矶4
-  type: hysteria
-  server: 45.144.2.120
-  port: 32721
-  sni: microsoft.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: wechat-video
-  auth_str: ybgSlsdfe8tI42fAhLp3J0ej8G08D3NIYBFQ16ZvvctUoxZUxD
-  up: 11
-  down: 55
-- name: 洛杉矶6
-  type: hysteria
-  server: 108.181.24.45
-  port: 45705
-  sni: wechat.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: wechat-video
-  auth_str: s9gPEwSmIg2wkTi28kz7zHWaE1FSMs2RtI0doiIJXMPi274FJB
-  up: 11
-  down: 55
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - 洛杉矶2
-  - 洛杉矶5
-  - 洛杉矶4
-  - 洛杉矶6
   url: 
   interval: 0
   tolerance: 0
