@@ -13,16 +13,16 @@ dns:
   - tls://1.0.0.1:853
   - tls://dns.google:853
 proxies:
-- name: 洛杉矶1
+- name: 洛杉矶2
   type: hysteria
-  server: 173.234.25.54
-  port: 20164
-  sni: www.microsoft.com
+  server: 108.181.18.186
+  port: 52958
+  sni: bing.com
   skip-cert-verify: true
   alpn:
   - h3
   protocol: udp
-  auth_str: Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F
+  auth_str: qyMvbDyzkIdgRnzYTmP6mLIP1zfCSRoHSNPgCro0aeT5WUPy6e
   up: 11
   down: 55
 - name: 洛杉矶5
@@ -35,18 +35,6 @@ proxies:
   - h3
   protocol: udp
   auth_str: Bs3gtsiZFL96GHA6Gayttp0NA0kaVe8bmhWLRK8OYpmGfNvg3U
-  up: 11
-  down: 55
-- name: 洛杉矶3
-  type: hysteria
-  server: 108.181.23.83
-  port: 14260
-  sni: wechat.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: wechat-video
-  auth_str: k6EAVOQ08HUjuJXGlOO0O0EgqqSkkFnqa2WmhNfFparutHWxhs
   up: 11
   down: 55
 - name: 洛杉矶4
@@ -77,9 +65,8 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - 洛杉矶1
+  - 洛杉矶2
   - 洛杉矶5
-  - 洛杉矶3
   - 洛杉矶4
   - 洛杉矶6
   url: 
