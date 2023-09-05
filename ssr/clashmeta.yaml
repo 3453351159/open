@@ -5,122 +5,127 @@ external-controller: 0.0.0.0:9090
 dns:
   enabled: true
   nameserver:
-  - 119.29.29.29
-  - 223.5.5.5
+    - 119.29.29.29
+    - 223.5.5.5
   fallback:
-  - 8.8.8.8
-  - 8.8.4.4
-  - tls://1.0.0.1:853
-  - tls://dns.google:853
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+
 proxies:
-- name: 洛杉矶2
-  type: hysteria
-  server: 108.181.18.186
-  port: 52958
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  auth_str: qyMvbDyzkIdgRnzYTmP6mLIP1zfCSRoHSNPgCro0aeT5WUPy6e
-  up: 11
-  down: 55
+  - {"name":"洛杉矶1","type":"vless","server":"185.22.153.195","port":443,"udp":true,"uuid":"2c7e86af-9fa9-456c-a1a2-22fefa6cb2ca","tls":true,"servername":"osxapps.itunes.apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"jLzBerhjXZGmQRCEWFFuc8CCo6c4Zv03iWc0OxWMl0M"},"client-fingerprint":"chrome"}
+  - {"name":"洛杉矶2","type":"vless","server":"45.136.245.126","port":443,"udp":true,"uuid":"85ff3407-fe83-4c32-9ed0-787ecc720db5","tls":true,"servername":"updates.cdn-apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"iyuVZulQDU-2txgZNn_iSv9qizc9UCw8FZqeL9pm7GA"},"client-fingerprint":"chrome"}
+  - {"name":"洛杉矶4","type":"vless","server":"45.145.72.227","port":16011,"udp":true,"uuid":"c891d2dd-352d-4e38-aec5-0cb454c12715","tls":true,"servername":"one-piece.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"xR3BwG1BWGWuRlHf8n3M1HPQeEV0FxATWuURzfCLkyE"},"client-fingerprint":"chrome"}
+  - {"name":"洛杉矶6","type":"vless","server":"167.160.90.252","port":11483,"udp":true,"uuid":"56fdb92d-bcdb-42c0-977c-db62006867a3","tls":true,"servername":"swdist.apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"TKCydrD0Hz70hQAPI7iMXRqfZbvniPrEcCVi0BswhEU"},"client-fingerprint":"chrome"}
 proxy-groups:
-- name: PROXY
-  type: select
-  proxies:
-  - 洛杉矶2
-  url: 
-  interval: 0
-  tolerance: 0
+  - name: PROXY
+    type: select
+    proxies:
+      - 洛杉矶1
+      - 洛杉矶2
+      - 洛杉矶4
+      - 洛杉矶6
 rule-providers:
   reject:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
     path: ./ruleset/reject.yaml
     interval: 86400
+
   icloud:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
     path: ./ruleset/icloud.yaml
     interval: 86400
+
   apple:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
     path: ./ruleset/apple.yaml
     interval: 86400
+
   google:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
     path: ./ruleset/google.yaml
     interval: 86400
+
   proxy:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
     path: ./ruleset/proxy.yaml
     interval: 86400
+
   direct:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
     path: ./ruleset/direct.yaml
     interval: 86400
+
   private:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
     path: ./ruleset/private.yaml
     interval: 86400
+
   gfw:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
     path: ./ruleset/gfw.yaml
     interval: 86400
+
   tld-not-cn:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
     path: ./ruleset/tld-not-cn.yaml
     interval: 86400
+
   telegramcidr:
     type: http
     behavior: ipcidr
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
     path: ./ruleset/telegramcidr.yaml
     interval: 86400
+
   cncidr:
     type: http
     behavior: ipcidr
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
     path: ./ruleset/cncidr.yaml
     interval: 86400
+
   lancidr:
     type: http
     behavior: ipcidr
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
     path: ./ruleset/lancidr.yaml
     interval: 86400
+
   applications:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
     path: ./ruleset/applications.yaml
     interval: 86400
 rules:
-- RULE-SET,applications,DIRECT
-- DOMAIN,clash.razord.top,DIRECT
-- DOMAIN,yacd.haishan.me,DIRECT
-- DOMAIN,apache.org,PROXY
-- DOMAIN,skywalking.apache.org,PROXY
-- RULE-SET,private,DIRECT
-- RULE-SET,reject,REJECT
-- RULE-SET,tld-not-cn,PROXY
-- RULE-SET,gfw,PROXY
-- RULE-SET,telegramcidr,PROXY
-- MATCH,DIRECT
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,apache.org,PROXY
+  - DOMAIN,skywalking.apache.org,PROXY
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,gfw,PROXY
+  - RULE-SET,telegramcidr,PROXY
+  - MATCH,DIRECT
