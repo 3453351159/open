@@ -30,6 +30,18 @@ proxy-groups:
       - 洛杉矶4
       - 洛杉矶5
       - 洛杉矶6
+  - name: 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 洛杉矶1
+      - 洛杉矶2
+      - 洛杉矶3
+      - 洛杉矶4
+      - 洛杉矶5
+      - 洛杉矶6
 rule-providers:
   reject:
     type: http
