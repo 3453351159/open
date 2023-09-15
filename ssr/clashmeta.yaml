@@ -14,31 +14,46 @@ dns:
     - tls://dns.google:853
 
 proxies:
+  - {"name":"metaip1","type":"hysteria","server":"108.181.22.131","port":32296,34500-34600,"sni":"qq.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"VZENlctKGivNmryU7Rb4spM8gBf7snyrA1NLfLHeM9roGWaEgS","up":2,"down":8,"hop_interval":600}
+  - {"name":"metaip2","type":"ssr","server":"www.dtku49.xyz","port":11111,"password":"dongtaiwang.com","cipher":"dummy","obfs":"plain","protocol":"auth_chain_a"}
+  - {"name":"metaip3","type":"ssr","server":"www.dtku50.xyz","port":30033,"password":"dongtaiwang.com","cipher":"none","obfs":"random_head","protocol":"auth_chain_b"}
+  - {"name":"metaip4","type":"ssr","server":"www.dtku49.xyz","port":11112,"password":"dongtaiwang.com","cipher":"dummy","obfs":"plain","protocol":"auth_chain_a"}
+  - {"name":"metaip5","type":"hysteria","server":"www.dtku48.xyz","port":31402,"sni":"bing.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"9rmR3Uln01JZj5Ejx9ktzyflVXYGp3QItQlz5c9uOUYMaxoMxV","up":2,"down":10}
+  - {"name":"metaip6","type":"ssr","server":"www.dtku48.xyz","port":10001,"password":"dongtaiwang.com","cipher":"none","obfs":"plain","protocol":"auth_chain_a"}
   - {"name":"洛杉矶1","type":"ssr","server":"108.181.18.187","port":11111,"password":"dongtaiwang.com","cipher":"dummy","obfs":"http_simple","protocol":"auth_chain_a"}
   - {"name":"洛杉矶3","type":"ssr","server":"www.dtku49.xyz","port":11111,"password":"dongtaiwang.com","cipher":"dummy","obfs":"plain","protocol":"auth_chain_a"}
   - {"name":"洛杉矶4","type":"ssr","server":"www.dtku50.xyz","port":30033,"password":"dongtaiwang.com","cipher":"none","obfs":"random_head","protocol":"auth_chain_b"}
   - {"name":"洛杉矶5","type":"ssr","server":"185.22.153.124","port":20022,"password":"dongtaiwang.com","cipher":"aes-256-cfb","obfs":"http_post","protocol":"auth_aes128_md5"}
-  - {"name":"洛杉矶6","type":"ssr","server":"45.150.165.79","port":10011,"password":"dongtaiwang.com","cipher":"dummy","obfs":"tls1.2_ticket_auth","protocol":"auth_chain_a"}
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
+      - metaip1
+      - metaip2
+      - metaip3
+      - metaip4
+      - metaip5
+      - metaip6
       - 洛杉矶1
       - 洛杉矶3
       - 洛杉矶4
       - 洛杉矶5
-      - 洛杉矶6
   - name: 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - metaip1
+      - metaip2
+      - metaip3
+      - metaip4
+      - metaip5
+      - metaip6
       - 洛杉矶1
       - 洛杉矶3
       - 洛杉矶4
       - 洛杉矶5
-      - 洛杉矶6
 rule-providers:
   reject:
     type: http
