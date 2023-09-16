@@ -21,8 +21,6 @@ proxies:
   - {"name":"metaip5","type":"hysteria","server":"www.dtku48.xyz","port":31402,"sni":"bing.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"9rmR3Uln01JZj5Ejx9ktzyflVXYGp3QItQlz5c9uOUYMaxoMxV","up":2,"down":10}
   - {"name":"metaip6","type":"ssr","server":"www.dtku48.xyz","port":10001,"password":"dongtaiwang.com","cipher":"none","obfs":"plain","protocol":"auth_chain_a"}
   - {"name":"洛杉矶1","type":"ssr","server":"108.181.18.187","port":11111,"password":"dongtaiwang.com","cipher":"dummy","obfs":"http_simple","protocol":"auth_chain_a"}
-  - {"name":"洛杉矶3","type":"ssr","server":"www.dtku49.xyz","port":11111,"password":"dongtaiwang.com","cipher":"dummy","obfs":"plain","protocol":"auth_chain_a"}
-  - {"name":"洛杉矶4","type":"ssr","server":"www.dtku50.xyz","port":30033,"password":"dongtaiwang.com","cipher":"none","obfs":"random_head","protocol":"auth_chain_b"}
   - {"name":"洛杉矶5","type":"ssr","server":"185.22.153.124","port":20022,"password":"dongtaiwang.com","cipher":"aes-256-cfb","obfs":"http_post","protocol":"auth_aes128_md5"}
 proxy-groups:
   - name: PROXY
@@ -35,8 +33,6 @@ proxy-groups:
       - metaip5
       - metaip6
       - 洛杉矶1
-      - 洛杉矶3
-      - 洛杉矶4
       - 洛杉矶5
   - name: 自动选择
     type: url-test
@@ -51,8 +47,6 @@ proxy-groups:
       - metaip5
       - metaip6
       - 洛杉矶1
-      - 洛杉矶3
-      - 洛杉矶4
       - 洛杉矶5
 rule-providers:
   reject:
