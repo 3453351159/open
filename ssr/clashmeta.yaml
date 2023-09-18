@@ -14,37 +14,22 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"metaip1","type":"hysteria","server":"108.181.22.131","port":32296,34500-34600,"sni":"qq.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"VZENlctKGivNmryU7Rb4spM8gBf7snyrA1NLfLHeM9roGWaEgS","up":2,"down":8,"hop_interval":600}
-  - {"name":"metaip2","type":"vless","server":"www.dtku49.xyz","port":18113,"udp":true,"uuid":"1a66f4f9-00b8-460e-b02e-17b2eaa9eae5","tls":true,"servername":"s0.awsstatic.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"tCyy6NnNNay5yqWTaotWm53q-STtoHdBpjqH9OxXOmE"},"client-fingerprint":"chrome"}
-  - {"name":"metaip3","type":"vless","server":"www.dtku50.xyz","port":20055,"udp":true,"uuid":"1630fbac-241f-4bc1-a28b-f32c79104c67","tls":true,"servername":"updates.cdn-apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"2AHqzptm5IQJ3Tgpiwz0Hu4HSboguKVIZl4BCY0DGGI"},"client-fingerprint":"chrome"}
-  - {"name":"metaip4","type":"ssr","server":"www.dtku49.xyz","port":11112,"password":"dongtaiwang.com","cipher":"dummy","obfs":"plain","protocol":"auth_chain_a"}
-  - {"name":"metaip6","type":"tuic","server":"tuic1.cfcdn3.xyz","port":65016,"udp":true,"uuid":"157c060e-7289-4fed-9154-00636029e064","password":157c060e-7289-4fed-9154-00636029e064,"alpn":["h3"],"disable-sni":true,"reduce-rtt":true,"udp-relay-mode":native,"congestion-controller":"bbr"}
-  - {"name":"洛杉矶1","type":"ssr","server":"108.181.18.187","port":11111,"password":"dongtaiwang.com","cipher":"dummy","obfs":"http_simple","protocol":"auth_chain_a"}
-  - {"name":"洛杉矶5","type":"ssr","server":"185.22.153.124","port":20022,"password":"dongtaiwang.com","cipher":"aes-256-cfb","obfs":"http_post","protocol":"auth_aes128_md5"}
+  - {"name":"ip","type":"vless","server":"108.181.22.132","port":20397,"udp":true,"uuid":"bd820dc9-be97-44ea-91e2-e95aeff0a13f","tls":true,"servername":"swdist.apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"3VV2JfX6nC4POM8ciU-fi71lI5qdSqP6CNPwJOwBbA8"},"client-fingerprint":"chrome"}
+  - {"name":"ip1","type":"vless","server":"108.181.22.130","port":19011,"udp":true,"uuid":"5ee73951-3411-4ebb-b1d2-456a1c376dbd","tls":true,"servername":"addons.mozilla.org","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY"},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - metaip1
-      - metaip2
-      - metaip3
-      - metaip4
-      - metaip6
-      - 洛杉矶1
-      - 洛杉矶5
+      - ip
+      - ip1
   - name: 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - metaip1
-      - metaip2
-      - metaip3
-      - metaip4
-      - metaip6
-      - 洛杉矶1
-      - 洛杉矶5
+      - ip
+      - ip1
 rule-providers:
   reject:
     type: http
