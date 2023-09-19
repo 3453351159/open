@@ -14,7 +14,7 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"ip","type":"vless","server":"108.181.22.132","port":20397,"udp":true,"uuid":"bd820dc9-be97-44ea-91e2-e95aeff0a13f","tls":true,"servername":"swdist.apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"3VV2JfX6nC4POM8ciU-fi71lI5qdSqP6CNPwJOwBbA8"},"client-fingerprint":"chrome"}
+  - {"name":"ip","type":"vmess","server":"dongtaiwang2.com","port":8080,"cipher":"auto","uuid":"252f9ec7-42e8-4c66-9a41-673d9b8e6799","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/lR4PxFLn/","headers":{"host":"cf1.freek1.xyz"}}}
   - {"name":"ip1","type":"vless","server":"108.181.22.130","port":19011,"udp":true,"uuid":"5ee73951-3411-4ebb-b1d2-456a1c376dbd","tls":true,"servername":"addons.mozilla.org","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"B-S59zqB3X0BXgmxJud3GgAwOp3DiSJ-W3Pt2gco2zY"},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: PROXY
