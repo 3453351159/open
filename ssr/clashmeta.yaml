@@ -14,12 +14,24 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"ip","type":"vmess","server":"dongtaiwang2.com","port":8880,"cipher":"auto","uuid":"0dc3ae8c-43d4-4a19-97d3-e78ff2e2fdab","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/OFR9SgW0/","headers":{"host":"9.dtku47.xyz"}}}
+  - {"name":"ip","type":"ss","server":"108.181.22.130","port":19117,"password":"VDKCjVeRIFcIXRQ6vPutZQ==","cipher":"2022-blake3-aes-128-gcm"}
+  - {"name":"ip1","type":"vless","server":"dongtaiwang2.com","port":443,"uuid":"6bd2d2f3-ac76-4a48-93c0-8e58154a03d9","tls":true,"servername":"cf108.freek1.xyz","network":"ws","ws-opts":{"path":"/xjefws","headers":{"host":"cf108.freek1.xyz"}},"client-fingerprint":"chrome"}
+  - {"name":"ip2","type":"ssr","server":"108.181.22.133","port":30001,"password":"dongtaiwang.com","cipher":"dummy","obfs":"plain","protocol":"auth_chain_a"}
+  - {"name":"ip3","type":"vless","server":"v4.cfnode.eu.org","port":443,"uuid":"6bd2d2f3-ac76-4a48-93c0-8e58154a03d9","tls":true,"servername":"cf108.freek1.xyz","network":"ws","ws-opts":{"path":"/xjefws","headers":{"host":"cf108.freek1.xyz"}},"client-fingerprint":"chrome"}
+  - {"name":"ip4","type":"vmess","server":"download.yunzhongzhuan.com","port":443,"cipher":"auto","uuid":"d70c4505-c9d7-44c4-a1ff-98a0bc7ebdd3","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/dongtaiwang.com","headers":{"host":"d.freeh1.xyz"}}}
+  - {"name":"ip5","type":"vless","server":"download.yunzhongzhuan.com","port":443,"uuid":"6bd2d2f3-ac76-4a48-93c0-8e58154a03d9","tls":true,"servername":"cf108.freek1.xyz","network":"ws","ws-opts":{"path":"/xjefws","headers":{"host":"cf108.freek1.xyz"}},"client-fingerprint":"chrome"}
+  - {"name":"ip6","type":"vless","server":"www.dongtaiwang2.com","port":443,"uuid":"6bd2d2f3-ac76-4a48-93c0-8e58154a03d9","tls":true,"servername":"cf108.freek1.xyz","network":"ws","ws-opts":{"path":"/xjefws","headers":{"host":"cf108.freek1.xyz"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
       - ip
+      - ip1
+      - ip2
+      - ip3
+      - ip4
+      - ip5
+      - ip6
   - name: 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -27,6 +39,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - ip
+      - ip1
+      - ip2
+      - ip3
+      - ip4
+      - ip5
+      - ip6
 rule-providers:
   reject:
     type: http
