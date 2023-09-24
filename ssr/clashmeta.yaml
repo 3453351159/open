@@ -15,11 +15,10 @@ dns:
 
 proxies:
   - {"name":"ip","type":"ss","server":"108.181.22.130","port":19117,"password":"VDKCjVeRIFcIXRQ6vPutZQ==","cipher":"2022-blake3-aes-128-gcm"}
-  - {"name":"ip1","type":"vless","server":"dongtaiwang2.com","port":443,"uuid":"6bd2d2f3-ac76-4a48-93c0-8e58154a03d9","tls":true,"servername":"cf108.freek1.xyz","network":"ws","ws-opts":{"path":"/xjefws","headers":{"host":"cf108.freek1.xyz"}},"client-fingerprint":"chrome"}
+  - {"name":"ip1","type":"tuic","server":"tuic3.dtku47.xyz","port":13579,"udp":true,"uuid":"e8829e2c-030f-477c-badd-a6817d0e4ff3","password":c9oG5brYoLUd,"alpn":["h3"],"disable-sni":true,"reduce-rtt":true,"udp-relay-mode":native,"congestion-controller":"bbr"}
   - {"name":"ip2","type":"ssr","server":"108.181.22.133","port":30001,"password":"dongtaiwang.com","cipher":"dummy","obfs":"plain","protocol":"auth_chain_a"}
-  - {"name":"ip3","type":"vless","server":"v4.cfnode.eu.org","port":443,"uuid":"6bd2d2f3-ac76-4a48-93c0-8e58154a03d9","tls":true,"servername":"cf108.freek1.xyz","network":"ws","ws-opts":{"path":"/xjefws","headers":{"host":"cf108.freek1.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"ip4","type":"vless","server":"download.yunzhongzhuan.com","port":443,"uuid":"6bd2d2f3-ac76-4a48-93c0-8e58154a03d9","tls":true,"servername":"cf108.freek1.xyz","network":"ws","ws-opts":{"path":"/xjefws","headers":{"host":"cf108.freek1.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"ip5","type":"hysteria","server":"108.181.22.205","port":32645,"sni":"bing.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"A5KdgNc7C69fuGw3my7FYyJnDVj55rwxLCIU70ObVCXRzHhEit","up":11,"down":55}
+  - {"name":"ip3","type":"tuic","server":"tuic1.dtku47.xyz","port":23788,"udp":true,"uuid":"ae02b441-c64b-46d3-bdc4-c0f578b1db22","password":xLDZTVuo3cjI,"alpn":["h3"],"disable-sni":true,"reduce-rtt":true,"udp-relay-mode":native,"congestion-controller":"bbr"}
+  - {"name":"ip4","type":"hysteria","server":"108.181.22.205","port":32645,"sni":"bing.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"A5KdgNc7C69fuGw3my7FYyJnDVj55rwxLCIU70ObVCXRzHhEit","up":11,"down":55}
 proxy-groups:
   - name: PROXY
     type: select
@@ -29,7 +28,6 @@ proxy-groups:
       - ip2
       - ip3
       - ip4
-      - ip5
   - name: 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -41,7 +39,6 @@ proxy-groups:
       - ip2
       - ip3
       - ip4
-      - ip5
 rule-providers:
   reject:
     type: http
