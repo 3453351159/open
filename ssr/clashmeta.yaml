@@ -14,31 +14,28 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"ip","type":"ss","server":"108.181.22.130","port":19117,"password":"VDKCjVeRIFcIXRQ6vPutZQ==","cipher":"2022-blake3-aes-128-gcm"}
+  - name: ip
+  - {"name":"ip","type":"ssr","server":"108.181.22.133","port":30002,"password":"dongtaiwang.com","cipher":"dummy","obfs":"plain","protocol":"auth_chain_a"}
   - {"name":"ip1","type":"tuic","server":"tuic3.dtku47.xyz","port":13579,"udp":true,"uuid":"e8829e2c-030f-477c-badd-a6817d0e4ff3","password":c9oG5brYoLUd,"alpn":["h3"],"disable-sni":true,"reduce-rtt":true,"udp-relay-mode":native,"congestion-controller":"bbr"}
-  - {"name":"ip2","type":"ssr","server":"108.181.22.133","port":30001,"password":"dongtaiwang.com","cipher":"dummy","obfs":"plain","protocol":"auth_chain_a"}
-  - {"name":"ip3","type":"tuic","server":"tuic1.dtku47.xyz","port":23788,"udp":true,"uuid":"ae02b441-c64b-46d3-bdc4-c0f578b1db22","password":xLDZTVuo3cjI,"alpn":["h3"],"disable-sni":true,"reduce-rtt":true,"udp-relay-mode":native,"congestion-controller":"bbr"}
-  - {"name":"ip4","type":"hysteria","server":"108.181.22.205","port":32645,"sni":"bing.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"A5KdgNc7C69fuGw3my7FYyJnDVj55rwxLCIU70ObVCXRzHhEit","up":11,"down":55}
+  - {"name":"ip2","type":"hysteria","server":"108.181.22.205","port":32645,"sni":"bing.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"A5KdgNc7C69fuGw3my7FYyJnDVj55rwxLCIU70ObVCXRzHhEit","up":11,"down":55}
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
+      - 
       - ip
       - ip1
       - ip2
-      - ip3
-      - ip4
   - name: 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 
       - ip
       - ip1
       - ip2
-      - ip3
-      - ip4
 rule-providers:
   reject:
     type: http
