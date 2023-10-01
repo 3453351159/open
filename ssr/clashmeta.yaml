@@ -15,18 +15,83 @@ dns:
 
 proxies:
   - name: ip
+    type: hysteria
+    server: hy2.dtku47.xyz
+    port: 15566
+    auth-str: jQrGpwSqp34P
+    alpn:
+      - h3
+    protocol: udp
+    up: "50 Mbps"
+    down: "100 Mbps"
+  - name: ip1
+    type: ss
+    server: 108.181.22.130
+    port: 11256
+    cipher: 2022-blake3-chacha20-poly1305
+    password: "+/b6Q+CbYg8b823kivADeViRHa7kdBprvhpyTk15QpY="
+  - name: ip2
+    type: hysteria
+    server: clash1.dtku47.xyz
+    port: 11223
+    auth-str: O5tQQiW2xKf5
+    alpn:
+      - h3
+    protocol: udp
+    up: "50 Mbps"
+    down: "100 Mbps"
+  - name: ip3
+    type: hysteria
+    server: hy1.dtku47.xyz
+    port: 11257
+    auth-str: oO5q7L6QPSuJ
+    alpn:
+      - h3
+    protocol: udp
+    up: "50 Mbps"
+    down: "100 Mbps"
+  - name: ip4
+    type: hysteria
+    server: hy1.dtku47.xyz
+    port: 22334
+    auth-str: lASdKzWK0VxL
+    alpn:
+      - h3
+    protocol: udp
+    up: "50 Mbps"
+    down: "100 Mbps"
+  - name: ip5
+    server: tuic1.dtku47.xyz
+    port: 22336
+    type: tuic
+    uuid: 39edbd65-1a14-4d58-bb5a-3b69c52d0869
+    password: hSOogY0SXn4T
+    alpn: [h3]
+    request-timeout: 8000
+    udp-relay-mode: native
+    congestion-controller: bbr
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - 
+      - ip
+      - ip1
+      - ip2
+      - ip3
+      - ip4
+      - ip5
   - name: 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 
+      - ip
+      - ip1
+      - ip2
+      - ip3
+      - ip4
+      - ip5
 rule-providers:
   reject:
     type: http
