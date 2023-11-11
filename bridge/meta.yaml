@@ -75,28 +75,6 @@ proxies:
     udp-relay-mode: native
     skip-cert-verify: true
     congestion-controller: bbr
-  - name: ip5
-    type: hysteria2
-    server: 109.104.152.219
-    port: 34091
-    password: dongtaiwang.com
-    alpn:
-      - h3
-    sni: bing.com
-    skip-cert-verify: true
-    up: "100 Mbps"
-    down: "100 Mbps"
-  - name: ip2
-    type: hysteria2
-    server: 167.160.90.251
-    port: 10981
-    password: i2XRv7zj1uWE
-    alpn:
-      - h3
-    sni: bing.com
-    skip-cert-verify: true
-    up: "100 Mbps"
-    down: "100 Mbps"
 proxy-groups:
   - name: PROXY
     type: select
@@ -110,7 +88,6 @@ proxy-groups:
       - ip2
       - ip3
       - ip4
-      - ip5
   - name: 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -126,7 +103,6 @@ proxy-groups:
       - ip2
       - ip3
       - ip4
-      - ip5
 rule-providers:
   reject:
     type: http
