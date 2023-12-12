@@ -14,10 +14,10 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"H1","type":"hysteria","server":"108.181.22.239","port":61561,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"PBhG3zqMKaMO5ZnemDvLrZ6v0Fd7EqCutDvzLNtvWHJ6IpMWJg","up":11,"down":55,"hop_interval": 120}
+  - {"name":"H1","type":"hysteria","server":"167.160.91.115","port":41189,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"bWAwIqINo7XDm1fUlXQGBifVIXoYs1ylgVKqWFKzK1XyDKuwNF","up":11,"down":55,"hop_interval": 120}
   - {"name":"H2","type":"hysteria","server":"51.158.54.46","port":11926,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"Trz2alKwzCImRAXI3nXfpo1ylpHfqOL8s1vageWKoyjjvWeMVs","up":11,"down":55,"hop_interval": 120}
   - {"name":"H3","type":"hysteria","server":"173.234.25.52","port":20164,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F","up":11,"down":55,"hop_interval": 120}
-  - {"name":"H4","type":"hysteria","server":"109.104.152.149","port":48406,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"xfNhrunYJ9GvDXCTktY2bIwhc1EyeyyAbiUMx1UtBOWgI4cMVB","up":11,"down":55,"hop_interval": 120}
+  - {"name":"H4","type":"hysteria","server":"108.181.22.239","port":41146,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
   - name: ip0
     server: tuic1.freeh1.xyz
     port: 40981
