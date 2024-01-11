@@ -74,17 +74,6 @@ proxies:
     down: "55 Mbps"
     skip-cert-verify: true 
   - name: ip5
-    server: 104.234.70.6
-    type: hysteria
-    port: 11330
-    auth-str: dongtaiwang.com
-    alpn:
-      - h3
-    protocol: udp
-    up: "11 Mbps"
-    down: "55 Mbps"
-    skip-cert-verify: true 
-  - name: ip6
     type: hysteria
     server: 167.160.90.251
     port: 48089
@@ -95,7 +84,7 @@ proxies:
     up: "11 Mbps"
     down: "55 Mbps"
     skip-cert-verify: true 
-  - name: ip7
+  - name: ip6
     type: hysteria
     server: 108.181.22.239
     port: 41146
@@ -121,7 +110,6 @@ proxy-groups:
       - ip4
       - ip5
       - ip6
-      - ip7
   - name: 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -139,7 +127,6 @@ proxy-groups:
       - ip4
       - ip5
       - ip6
-      - ip7
 rule-providers:
   reject:
     type: http
