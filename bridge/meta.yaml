@@ -16,9 +16,10 @@ dns:
 proxies:
   - {"name":"H1","type":"hysteria","server":"167.160.91.115","port":41189,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"bWAwIqINo7XDm1fUlXQGBifVIXoYs1ylgVKqWFKzK1XyDKuwNF","up":11,"down":55,"hop_interval": 120}
   - {"name":"H2","type":"hysteria","server":"51.158.54.46","port":11926,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"Trz2alKwzCImRAXI3nXfpo1ylpHfqOL8s1vageWKoyjjvWeMVs","up":11,"down":55,"hop_interval": 120}
-  - {"name":"H3","type":"hysteria","server":"173.234.25.52","port":20164,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"Ljg6NNEATDqP97hdAdHe1lJv7ggtKc0h7zmCCZKCX3qY0LR64F","up":11,"down":55,"hop_interval": 120}
+  - {"name":"H3","type":"hysteria","server":"173.234.25.52","port":30072,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
   - {"name":"H4","type":"hysteria","server":"108.181.22.239","port":39967,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
-  - name: ip0
+  - {"name":"ip0","type":"vmess","server":"dongtaiwang2.com","port":443,"cipher":"auto","uuid":"f5c180eb-fbce-49ac-9029-482eca9385c0","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/gzogws","headers":{"host":"xray1.freeh1.xyz"}}}
+  - name: ip1
     type: hysteria
     server: 108.181.22.213
     port: 52284
@@ -29,10 +30,11 @@ proxies:
     up: "11 Mbps"
     down: "55 Mbps"
     skip-cert-verify: true 
-  - name: ip1
+  - {"name":"ip2","type":"vless","server":"dongtaiwang2.com","port":443,"uuid":"ffb15cd2-0521-49de-b8aa-fb15d58c8075","tls":true,"servername":"v2ray3.freegradely.xyz","network":"ws","ws-opts":{"path":"/bqbows","headers":{"host":"v2ray3.freegradely.xyz"}},"client-fingerprint":"chrome"}
+  - name: ip3
     type: hysteria
-    server: 108.181.22.155
-    port: 19721
+    server: www4.dtku49.xyz
+    port: 22334
     auth-str: dongtaiwang.com
     alpn:
       - h3
@@ -40,18 +42,7 @@ proxies:
     up: "11 Mbps"
     down: "55 Mbps"
     skip-cert-verify: true 
-  - name: ip2
-    type: hysteria
-    server: www.dtku46.xyz
-    port: 11223
-    auth-str: mqoE9qSoyMFa
-    alpn:
-      - h3
-    protocol: udp
-    up: "11 Mbps"
-    down: "55 Mbps"
-    skip-cert-verify: true 
-  - name: ip3
+  - name: ip4
     server: 108.181.2.154
     type: hysteria
     port: 33445
@@ -62,7 +53,7 @@ proxies:
     up: "11 Mbps"
     down: "55 Mbps"
     skip-cert-verify: true 
-  - name: ip4
+  - name: ip5
     server: 167.160.91.116
     type: hysteria
     port: 55009
@@ -73,21 +64,10 @@ proxies:
     up: "11 Mbps"
     down: "55 Mbps"
     skip-cert-verify: true 
-  - name: ip5
-    type: hysteria
-    server: 167.160.90.251
-    port: 48089
-    auth-str: dongtaiwang.com
-    alpn:
-      - h3
-    protocol: udp
-    up: "11 Mbps"
-    down: "55 Mbps"
-    skip-cert-verify: true 
   - name: ip6
     type: hysteria
-    server: 108.181.22.239
-    port: 41146
+    server: 167.160.90.252
+    port: 48089
     auth-str: dongtaiwang.com
     alpn:
       - h3
