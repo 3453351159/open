@@ -22,8 +22,8 @@ proxies:
   - {"name":"ip1","type":"vmess","server":"cm.dongtaiwang3.com","port":443,"cipher":"auto","uuid":"f5c180eb-fbce-49ac-9029-482eca9385c0","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/gzogws","headers":{"host":"xray1.freeh1.xyz"}}}
   - {"name":"ip2","type":"vmess","server":"dongtaiwang3.com","port":443,"cipher":"auto","uuid":"f5c180eb-fbce-49ac-9029-482eca9385c0","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/gzogws","headers":{"host":"xray1.freeh1.xyz"}}}
   - {"name":"ip3","type":"vless","server":"dongtaiwang3.com","port":443,"uuid":"a9202ced-3185-489c-8b28-74e9a00d894d","tls":true,"servername":"dongtaiwang.dtku47.xyz","network":"ws","ws-opts":{"path":"/eobjws","headers":{"host":"dongtaiwang.dtku47.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"ip1-2","type":"vless","server":"fr.freeh1.xyz","port":443,"uuid":"7b671cd2-233d-406c-88da-1c687727dc52","tls":true,"servername":"fr.freeh1.xyz","network":"ws","ws-opts":{"path":"/kfhaws","headers":{"host":"fr.freeh1.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"ip4","type":"vless","server":"fr.freeh1.xyz","port":443,"uuid":"7b671cd2-233d-406c-88da-1c687727dc52","tls":true,"servername":"fr.freeh1.xyz","network":"ws","ws-opts":{"path":"/kfhaws","headers":{"host":"fr.freeh1.xyz"}},"client-fingerprint":"chrome"}
+  - {"name":"ip1-2","type":"vless","server":"cu.dongtaiwang3.com","port":443,"uuid":"7b671cd2-233d-406c-88da-1c687727dc52","tls":true,"servername":"fr.freeh1.xyz","network":"ws","ws-opts":{"path":"/kfhaws","headers":{"host":"fr.freeh1.xyz"}},"client-fingerprint":"chrome"}
+  - {"name":"ip4","type":"vless","server":"cu.dongtaiwang3.com","port":443,"uuid":"7b671cd2-233d-406c-88da-1c687727dc52","tls":true,"servername":"fr.freeh1.xyz","network":"ws","ws-opts":{"path":"/kfhaws","headers":{"host":"fr.freeh1.xyz"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: PROXY
     type: select
