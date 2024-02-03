@@ -14,11 +14,22 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"dongtaiwang.com_1","type":"vmess","server":"108.181.5.18","port":18657,"cipher":"auto","uuid":"636ba072-493e-4235-b7a8-822bd4e340d5","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
-  - {"name":"dongtaiwang.com_2","type":"vmess","server":"23.227.39.52","port":8080,"cipher":"auto","uuid":"87ed7bbb-7ecb-435c-975b-cd55a760bcb5","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/H76zeQJw/","headers":{"host":"0.freegradely.xyz"}}}
-  - {"name":"dongtaiwang.com_3","type":"vless","server":"51.159.103.141","port":12207,"udp":true,"uuid":"63925418-7ae3-4da1-9e73-fb3fc5af6fdb","tls":true,"servername":"s0.awsstatic.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"A-DHKUq8W8KZKM1gr8xcKCoqKSct73NtdSjUZMhFcEM","short-id":"6ba85179e30d4fc2"},"client-fingerprint":"chrome"}
-  - {"name":"dongtaiwang.com_4","type":"ss","server":"uydyfkghjrtcsdx.youcansee.cyou","port":20167,"password":"81416f3c-5b00-4056-8e5f-d7ffdd884bf4","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"dongtaiwang.com_5","type":"vmess","server":"108.181.2.154","port":33445,"cipher":"auto","uuid":"7de8d7aa-ae4a-4d75-82f4-2e8b46fc0290","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - name: dongtaiwang.com_1
+    type: hysteria
+    server: 108.181.5.20
+    port: 22881
+    auth-str: dongtaiwang.com
+    alpn:
+      - h3
+    protocol: udp
+    up: "11 Mbps"
+    down: "55 Mbps"
+    skip-cert-verify: true 
+  - {"name":"dongtaiwang.com_2","type":"ssr","server":"108.181.2.157","port":22222,"password":"dongtaiwang.com","cipher":"dummy","obfs":"plain","protocol":"auth_chain_a"}
+  - {"name":"dongtaiwang.com_3","type":"tuic","server":"62.210.103.14","port":44556,"udp":true,"uuid":"0d9d053c-81c8-4f26-9b5c-dff313dfdd70","password":dongtaiwang.com,"alpn":["h3"],"disable-sni":true,"reduce-rtt":true,"udp-relay-mode":native,"congestion-controller":"bbr"}
+  - {"name":"dongtaiwang.com_4","type":"vless","server":"108.181.2.156","port":19695,"udp":true,"uuid":"906d367a-a5d2-467c-b476-a29c79215003","tls":true,"servername":"lol.secure.dyn.riotcdn.net","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"TETJrb4V6VlHpITM8jXZjFsh1bUav4iPuSVDMjUBVyo","short-id":"6ba85179e30d4fc2"},"client-fingerprint":"chrome"}
+  - {"name":"dongtaiwang.com_5","type":"tuic","server":"109.104.152.4","port":443,"udp":true,"uuid":"9ec44c8c-5dc0-4c92-a7ed-5422b0ac1913","password":dongtaiwang.com,"alpn":["h3"],"disable-sni":true,"reduce-rtt":true,"udp-relay-mode":native,"congestion-controller":"bbr"}
+  - {"name":"dongtaiwang.com_6","type":"ss","server":"uydyfkghjrtcsdx.youcansee.cyou","port":20167,"password":"81416f3c-5b00-4056-8e5f-d7ffdd884bf4","cipher":"chacha20-ietf-poly1305"}
   - {"name":"dongtaiwang.com_10","type":"vmess","server":"104.17.25.1","port":80,"cipher":"auto","uuid":"aa8edc9c-978a-4f09-906f-a2668751e935","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"usnatvpn.catnipballs.gay"}}}
   - {"name":"dongtaiwang.com_11","type":"vmess","server":"3SAO.5GTOCDOCAO.COM","port":80,"cipher":"auto","uuid":"eb9e8a52-0fec-4a10-8d16-af3b32874933","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/5gtocdocao.com","headers":{"host":"3SAO.5GTOCDOCAO.COM"}}}
   - {"name":"dongtaiwang.com_12","type":"vmess","server":"5.252.23.173","port":80,"cipher":"auto","uuid":"d70a32b5-5d4b-4ebe-adf6-8f34c73871d2","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess"}}
@@ -29,18 +40,16 @@ proxies:
   - {"name":"dongtaiwang.com_17","type":"vmess","server":"nb22.ntbq.dynu.net","port":12002,"cipher":"auto","uuid":"99e39047-9298-404e-b632-1867f7ed1b37","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"dongtaiwang.com_18","type":"vmess","server":"c12.twtc.dynu.net","port":6122,"cipher":"auto","uuid":"f4595480-44d4-4d55-a37e-a5b1e0ec64d6","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"dongtaiwang.com_19","type":"vmess","server":"data-us-v1.shwjfkw.cn","port":20401,"cipher":"auto","uuid":"b1478e24-4916-3abe-8f17-15931012ecbe","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/debian","headers":{"host":"data-us-v1.shwjfkw.cn"}}}
-  - {"name":"dongtaiwang.com_6","type":"ss","server":"service.ouluyun9803.com","port":26601,"password":"f665c5d0-77c0-4196-bc8d-f0450e9c665b","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"dongtaiwang.com_7","type":"vless","server":"109.104.152.4","port":16414,"udp":true,"uuid":"80b5b4de-0619-4ac2-b1ff-f2bcc697b641","tls":true,"servername":"mensura.cdn-apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"QR_5pj5Kj8I3sO6-6ywnM7B1fE2-btdv-IFEas2JHgE","short-id":"6ba85179e30d4fc2"},"client-fingerprint":"chrome"}
+  - {"name":"dongtaiwang.com_7","type":"ss","server":"service.ouluyun9803.com","port":26601,"password":"f665c5d0-77c0-4196-bc8d-f0450e9c665b","cipher":"chacha20-ietf-poly1305"}
   - {"name":"dongtaiwang.com_20","type":"vmess","server":"cz1-vmess.sshmax.xyz","port":80,"cipher":"auto","uuid":"ef7cfdf6-63e1-4307-bb61-40eb81acb5bd","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess"}}
   - {"name":"dongtaiwang.com_21","type":"vmess","server":"104.17.25.2","port":80,"cipher":"auto","uuid":"d6664518-c8e1-42cf-f2c1-d33dcc01a8a6","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"sgvpn.catnipballs.gay"}}}
   - {"name":"dongtaiwang.com_8","type":"ss","server":"service.ouluyun9803.com","port":26668,"password":"f665c5d0-77c0-4196-bc8d-f0450e9c665b","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"dongtaiwang.com_9","type":"vless","server":"108.181.5.130","port":20221,"udp":true,"uuid":"8eb74635-0857-4673-9965-f6d928b420c9","tls":true,"servername":"www.lovelive-anime.jp","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"abc-YDOgV8WkuXRT9bJH-N_E6LaLJ9_7Sfc5OGajaSU","short-id":"6ba85179e30d4fc2"},"client-fingerprint":"chrome"}
-  - {"name":"dongtaiwang.com_22","type":"vmess","server":"149.56.7.123","port":27490,"cipher":"auto","uuid":"3722f77b-21b0-4892-b9f7-79c33b76e733","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"jkgd.sbs"}}}
-  - {"name":"dongtaiwang.com_23","type":"vmess","server":"94.131.97.123","port":80,"cipher":"auto","uuid":"ef7cfdf6-63e1-4307-bb61-40eb81acb5bd","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"cz1-vmess.sshmax.xyz"}}}
-  - {"name":"dongtaiwang.com_24","type":"vmess","server":"be1-vmess.sshmax.xyz","port":80,"cipher":"auto","uuid":"38df59ec-30e2-45e9-86c7-5a58667e6994","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess"}}
-  - {"name":"dongtaiwang.com_25","type":"vmess","server":"104.17.25.1","port":80,"cipher":"auto","uuid":"3d668cbe-5464-4a79-aab5-e301b4e0f169","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"dg.catnipballs.gay"}}}
-  - {"name":"dongtaiwang.com_26","type":"vmess","server":"pt2-vmess.sshmax.xyz","port":80,"cipher":"auto","uuid":"099b5b7a-9d71-43cd-80e3-b8fbe1cc2695","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess"}}
-  - {"name":"dongtaiwang.com_27","type":"vmess","server":"94.131.8.32","port":80,"cipher":"auto","uuid":"57e37a74-badc-4b71-87c7-5b9e20879b58","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess"}}
+  - {"name":"dongtaiwang.com_9","type":"vmess","server":"149.56.7.123","port":27490,"cipher":"auto","uuid":"3722f77b-21b0-4892-b9f7-79c33b76e733","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"jkgd.sbs"}}}
+  - {"name":"dongtaiwang.com_22","type":"vmess","server":"94.131.97.123","port":80,"cipher":"auto","uuid":"ef7cfdf6-63e1-4307-bb61-40eb81acb5bd","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"cz1-vmess.sshmax.xyz"}}}
+  - {"name":"dongtaiwang.com_23","type":"vmess","server":"be1-vmess.sshmax.xyz","port":80,"cipher":"auto","uuid":"38df59ec-30e2-45e9-86c7-5a58667e6994","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess"}}
+  - {"name":"dongtaiwang.com_24","type":"vmess","server":"104.17.25.1","port":80,"cipher":"auto","uuid":"3d668cbe-5464-4a79-aab5-e301b4e0f169","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"dg.catnipballs.gay"}}}
+  - {"name":"dongtaiwang.com_25","type":"vmess","server":"pt2-vmess.sshmax.xyz","port":80,"cipher":"auto","uuid":"099b5b7a-9d71-43cd-80e3-b8fbe1cc2695","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess"}}
+  - {"name":"dongtaiwang.com_26","type":"vmess","server":"94.131.8.32","port":80,"cipher":"auto","uuid":"57e37a74-badc-4b71-87c7-5b9e20879b58","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess"}}
   - {"name":"H1","type":"hysteria","server":"173.234.25.52","port":30072,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
   - {"name":"H2","type":"hysteria","server":"167.160.91.115","port":41189,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"bWAwIqINo7XDm1fUlXQGBifVIXoYs1ylgVKqWFKzK1XyDKuwNF","up":11,"down":55,"hop_interval": 120}
   - {"name":"H3","type":"hysteria","server":"108.181.22.239","port":39967,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
@@ -54,6 +63,7 @@ proxy-groups:
       - dongtaiwang.com_3
       - dongtaiwang.com_4
       - dongtaiwang.com_5
+      - dongtaiwang.com_6
       - dongtaiwang.com_10
       - dongtaiwang.com_11
       - dongtaiwang.com_12
@@ -64,7 +74,6 @@ proxy-groups:
       - dongtaiwang.com_17
       - dongtaiwang.com_18
       - dongtaiwang.com_19
-      - dongtaiwang.com_6
       - dongtaiwang.com_7
       - dongtaiwang.com_20
       - dongtaiwang.com_21
@@ -75,7 +84,6 @@ proxy-groups:
       - dongtaiwang.com_24
       - dongtaiwang.com_25
       - dongtaiwang.com_26
-      - dongtaiwang.com_27
       - H1
       - H2
       - H3
@@ -91,6 +99,7 @@ proxy-groups:
       - dongtaiwang.com_3
       - dongtaiwang.com_4
       - dongtaiwang.com_5
+      - dongtaiwang.com_6
       - dongtaiwang.com_10
       - dongtaiwang.com_11
       - dongtaiwang.com_12
@@ -101,7 +110,6 @@ proxy-groups:
       - dongtaiwang.com_17
       - dongtaiwang.com_18
       - dongtaiwang.com_19
-      - dongtaiwang.com_6
       - dongtaiwang.com_7
       - dongtaiwang.com_20
       - dongtaiwang.com_21
@@ -112,7 +120,6 @@ proxy-groups:
       - dongtaiwang.com_24
       - dongtaiwang.com_25
       - dongtaiwang.com_26
-      - dongtaiwang.com_27
       - H1
       - H2
       - H3
