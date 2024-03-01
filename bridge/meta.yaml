@@ -14,6 +14,17 @@ dns:
     - tls://dns.google:853
 
 proxies:
+  - name: dongtaiwang.com_0
+    type: ss
+    server: 208.115.233.85
+    port: 443
+    cipher: 2022-blake3-chacha20-poly1305
+    password: "Sq2/krOMh2iWHdx2sntvbdEa4MgLTbei0N9ffvucEy0="
+    plugin: shadow-tls
+    plugin-opts:
+      host: "nijigen-works.jp"
+      password: "nhydIlubXs8GkXxMEO/+vikWUhdNyVjzl/uxYBSZLSc="
+      version: 3
   - {"name":"dongtaiwang.com_1","type":"vmess","server":"yh1.freeh1.xyz","port":8080,"cipher":"auto","uuid":"eb6b425d-0a43-4f4b-998f-e83d1b7e0997","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"per-essex-patterns-bowling.trycloudflare.com","network":"ws","ws-opts":{"path":"eb6b425d-0a43-4f4b-998f-e83d1b7e0997-vm","headers":{"host":"per-essex-patterns-bowling.trycloudflare.com"}}}
   - {"name":"dongtaiwang.com_2","type":"vmess","server":"fbi.gov","port":8080,"cipher":"auto","uuid":"5818310a-92ee-40cd-8303-0dc1396aadda","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"bibliographic-sword-sequence-advertisers.trycloudflare.com","network":"ws","ws-opts":{"path":"5818310a-92ee-40cd-8303-0dc1396aadda-vm","headers":{"host":"bibliographic-sword-sequence-advertisers.trycloudflare.com"}}}
   - {"name":"dongtaiwang.com_3","type":"vmess","server":"23.227.39.24","port":8080,"cipher":"auto","uuid":"eb6b425d-0a43-4f4b-998f-e83d1b7e0997","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"per-essex-patterns-bowling.trycloudflare.com","network":"ws","ws-opts":{"path":"eb6b425d-0a43-4f4b-998f-e83d1b7e0997-vm","headers":{"host":"per-essex-patterns-bowling.trycloudflare.com"}}}
@@ -35,6 +46,7 @@ proxy-groups:
   - name: PROXY
     type: select
     proxies:
+      - dongtaiwang.com_0
       - dongtaiwang.com_1
       - dongtaiwang.com_2
       - dongtaiwang.com_3
@@ -58,6 +70,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - dongtaiwang.com_0
       - dongtaiwang.com_1
       - dongtaiwang.com_2
       - dongtaiwang.com_3
