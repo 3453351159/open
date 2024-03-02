@@ -14,25 +14,14 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - name: dongtaiwang.com_0
-    type: ss
-    server: 208.115.233.85
-    port: 443
-    cipher: 2022-blake3-chacha20-poly1305
-    password: "Sq2/krOMh2iWHdx2sntvbdEa4MgLTbei0N9ffvucEy0="
-    plugin: shadow-tls
-    plugin-opts:
-      host: "nijigen-works.jp"
-      password: "nhydIlubXs8GkXxMEO/+vikWUhdNyVjzl/uxYBSZLSc="
-      version: 3
-  - {"name":"dongtaiwang.com_1","type":"vmess","server":"yh1.freeh1.xyz","port":8080,"cipher":"auto","uuid":"eb6b425d-0a43-4f4b-998f-e83d1b7e0997","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"per-essex-patterns-bowling.trycloudflare.com","network":"ws","ws-opts":{"path":"eb6b425d-0a43-4f4b-998f-e83d1b7e0997-vm","headers":{"host":"per-essex-patterns-bowling.trycloudflare.com"}}}
-  - {"name":"dongtaiwang.com_2","type":"vmess","server":"fbi.gov","port":8080,"cipher":"auto","uuid":"5818310a-92ee-40cd-8303-0dc1396aadda","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"bibliographic-sword-sequence-advertisers.trycloudflare.com","network":"ws","ws-opts":{"path":"5818310a-92ee-40cd-8303-0dc1396aadda-vm","headers":{"host":"bibliographic-sword-sequence-advertisers.trycloudflare.com"}}}
-  - {"name":"dongtaiwang.com_3","type":"vmess","server":"23.227.39.24","port":8080,"cipher":"auto","uuid":"eb6b425d-0a43-4f4b-998f-e83d1b7e0997","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"per-essex-patterns-bowling.trycloudflare.com","network":"ws","ws-opts":{"path":"eb6b425d-0a43-4f4b-998f-e83d1b7e0997-vm","headers":{"host":"per-essex-patterns-bowling.trycloudflare.com"}}}
-  - {"name":"dongtaiwang.com_4","type":"vmess","server":"yh1.freeh1.xyz","port":8080,"cipher":"auto","uuid":"4679e4ed-dec7-4dfe-b3dd-c0f13592a0c4","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"uh-lawyers-instruments-kernel.trycloudflare.com","network":"ws","ws-opts":{"path":"4679e4ed-dec7-4dfe-b3dd-c0f13592a0c4-vm","headers":{"host":"uh-lawyers-instruments-kernel.trycloudflare.com"}}}
-  - {"name":"dongtaiwang.com_5","type":"vmess","server":"fbi.gov","port":8080,"cipher":"auto","uuid":"c3f22c72-8c9e-4dd1-80e9-cc64b72846a6","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"nest-emily-healing-h.trycloudflare.com","network":"ws","ws-opts":{"path":"c3f22c72-8c9e-4dd1-80e9-cc64b72846a6-vm","headers":{"host":"nest-emily-healing-h.trycloudflare.com"}}}
-  - {"name":"dongtaiwang.com_6","type":"vmess","server":"23.227.39.12","port":8080,"cipher":"auto","uuid":"4679e4ed-dec7-4dfe-b3dd-c0f13592a0c4","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"uh-lawyers-instruments-kernel.trycloudflare.com","network":"ws","ws-opts":{"path":"4679e4ed-dec7-4dfe-b3dd-c0f13592a0c4-vm","headers":{"host":"uh-lawyers-instruments-kernel.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_1","type":"vmess","server":"yh1.freeh1.xyz","port":8080,"cipher":"auto","uuid":"d4534b81-2c40-48a2-9a7b-35cd958c7437","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"uh-lawyers-instruments-kernel.trycloudflare.com","network":"ws","ws-opts":{"path":"d4534b81-2c40-48a2-9a7b-35cd958c7437-vm","headers":{"host":"uh-lawyers-instruments-kernel.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_2","type":"vmess","server":"fbi.gov","port":8080,"cipher":"auto","uuid":"bdce8656-2802-4470-8946-ef3cf5244aa6","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"pcs-referenced-camera-concerns.trycloudflare.com","network":"ws","ws-opts":{"path":"bdce8656-2802-4470-8946-ef3cf5244aa6-vm","headers":{"host":"pcs-referenced-camera-concerns.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_3","type":"vmess","server":"23.227.39.12","port":8080,"cipher":"auto","uuid":"d4534b81-2c40-48a2-9a7b-35cd958c7437","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"uh-lawyers-instruments-kernel.trycloudflare.com","network":"ws","ws-opts":{"path":"d4534b81-2c40-48a2-9a7b-35cd958c7437-vm","headers":{"host":"uh-lawyers-instruments-kernel.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_4","type":"vmess","server":"yh1.freeh1.xyz","port":8080,"cipher":"auto","uuid":"c575b66a-2901-4e05-a4b2-453e196f9bb5","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"per-essex-patterns-bowling.trycloudflare.com","network":"ws","ws-opts":{"path":"c575b66a-2901-4e05-a4b2-453e196f9bb5-vm","headers":{"host":"per-essex-patterns-bowling.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_5","type":"vmess","server":"fbi.gov","port":8080,"cipher":"auto","uuid":"5818310a-92ee-40cd-8303-0dc1396aadda","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"bibliographic-sword-sequence-advertisers.trycloudflare.com","network":"ws","ws-opts":{"path":"5818310a-92ee-40cd-8303-0dc1396aadda-vm","headers":{"host":"bibliographic-sword-sequence-advertisers.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_6","type":"vmess","server":"23.227.39.24","port":8080,"cipher":"auto","uuid":"c575b66a-2901-4e05-a4b2-453e196f9bb5","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"per-essex-patterns-bowling.trycloudflare.com","network":"ws","ws-opts":{"path":"c575b66a-2901-4e05-a4b2-453e196f9bb5-vm","headers":{"host":"per-essex-patterns-bowling.trycloudflare.com"}}}
   - {"name":"dongtaiwang.com_7","type":"vmess","server":"23.227.39.23","port":8080,"cipher":"auto","uuid":"e380bde6-f120-4b80-bdae-ea68b1b64504","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"configured-creek-relating-theater.trycloudflare.com","network":"ws","ws-opts":{"path":"e380bde6-f120-4b80-bdae-ea68b1b64504-vm","headers":{"host":"configured-creek-relating-theater.trycloudflare.com"}}}
-  - {"name":"dongtaiwang.com_8","type":"vmess","server":"fbi.gov","port":8080,"cipher":"auto","uuid":"4f6032e4-ba53-4087-b1e1-8b0ef5ebfebc","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"pcs-referenced-camera-concerns.trycloudflare.com","network":"ws","ws-opts":{"path":"4f6032e4-ba53-4087-b1e1-8b0ef5ebfebc-vm","headers":{"host":"pcs-referenced-camera-concerns.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_8","type":"vmess","server":"fbi.gov","port":8080,"cipher":"auto","uuid":"c3f22c72-8c9e-4dd1-80e9-cc64b72846a6","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"nest-emily-healing-h.trycloudflare.com","network":"ws","ws-opts":{"path":"c3f22c72-8c9e-4dd1-80e9-cc64b72846a6-vm","headers":{"host":"nest-emily-healing-h.trycloudflare.com"}}}
   - {"name":"dongtaiwang.com_9","type":"vmess","server":"yh1.freeh1.xyz","port":8080,"cipher":"auto","uuid":"e380bde6-f120-4b80-bdae-ea68b1b64504","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"configured-creek-relating-theater.trycloudflare.com","network":"ws","ws-opts":{"path":"e380bde6-f120-4b80-bdae-ea68b1b64504-vm","headers":{"host":"configured-creek-relating-theater.trycloudflare.com"}}}
   - {"name":"dongtaiwang.com_10","type":"vmess","server":"fbi.gov","port":8080,"cipher":"auto","uuid":"d137d31c-5e9d-4cb2-8f7b-b171fc63e2aa","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"larger-marketing-amounts-skin.trycloudflare.com","network":"ws","ws-opts":{"path":"d137d31c-5e9d-4cb2-8f7b-b171fc63e2aa-vm","headers":{"host":"larger-marketing-amounts-skin.trycloudflare.com"}}}
   - {"name":"dongtaiwang.com_11","type":"vmess","server":"23.227.39.45","port":8080,"cipher":"auto","uuid":"52899235-7faa-4f6f-b463-972cd7cfce04","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"widescreen-instruction-breakdown-postage.trycloudflare.com","network":"ws","ws-opts":{"path":"52899235-7faa-4f6f-b463-972cd7cfce04-vm","headers":{"host":"widescreen-instruction-breakdown-postage.trycloudflare.com"}}}
@@ -46,7 +35,6 @@ proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - dongtaiwang.com_0
       - dongtaiwang.com_1
       - dongtaiwang.com_2
       - dongtaiwang.com_3
@@ -70,7 +58,6 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - dongtaiwang.com_0
       - dongtaiwang.com_1
       - dongtaiwang.com_2
       - dongtaiwang.com_3
