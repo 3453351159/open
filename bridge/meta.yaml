@@ -1,0 +1,194 @@
+mixed-port: 7890
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enabled: true
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+
+proxies:
+  - name: dongtaiwang.com_0
+    type: ss
+    server: 109.104.152.186
+    port: 11223
+    cipher: 2022-blake3-chacha20-poly1305
+    password: "7/bb9x3TJQ4Y5SRA/Al3OdwxIk4uf3Jg8N9wDQg+Uto="
+    smux:
+      enabled: true
+      protocol: smux
+      max-connections: 1
+      min-streams: 4
+      statistic: false
+      only-tcp: false
+      padding: true
+      brutal-opts:
+        enabled: true
+        up: 11
+        down: 55
+  - {"name":"dongtaiwang.com_1","type":"hysteria","server":"108.181.5.21","port":44550,"sni":"bing.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval":10}
+  - {"name":"dongtaiwang.com_2","type":"vmess","server":"104.26.9.16","port":8080,"cipher":"auto","uuid":"01c3345a-aadb-4e07-a920-947c20d83096","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"emily-citizen-oxford-gba.trycloudflare.com","network":"ws","ws-opts":{"path":"01c3345a-aadb-4e07-a920-947c20d83096-vm","headers":{"host":"emily-citizen-oxford-gba.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_3","type":"vmess","server":"fbi.gov","port":8080,"cipher":"auto","uuid":"01c3345a-aadb-4e07-a920-947c20d83096","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"emily-citizen-oxford-gba.trycloudflare.com","network":"ws","ws-opts":{"path":"01c3345a-aadb-4e07-a920-947c20d83096-vm","headers":{"host":"emily-citizen-oxford-gba.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_4","type":"vmess","server":"104.19.21.44","port":8080,"cipher":"auto","uuid":"01c3345a-aadb-4e07-a920-947c20d83096","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"emily-citizen-oxford-gba.trycloudflare.com","network":"ws","ws-opts":{"path":"01c3345a-aadb-4e07-a920-947c20d83096-vm","headers":{"host":"emily-citizen-oxford-gba.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_5","type":"vmess","server":"yh1.freeh1.xyz","port":8080,"cipher":"auto","uuid":"01c3345a-aadb-4e07-a920-947c20d83096","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"emily-citizen-oxford-gba.trycloudflare.com","network":"ws","ws-opts":{"path":"01c3345a-aadb-4e07-a920-947c20d83096-vm","headers":{"host":"emily-citizen-oxford-gba.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_6","type":"vmess","server":"104.26.9.51","port":8080,"cipher":"auto","uuid":"01c3345a-aadb-4e07-a920-947c20d83096","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"emily-citizen-oxford-gba.trycloudflare.com","network":"ws","ws-opts":{"path":"01c3345a-aadb-4e07-a920-947c20d83096-vm","headers":{"host":"emily-citizen-oxford-gba.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_7","type":"vmess","server":"yh2.freeh1.xyz","port":8080,"cipher":"auto","uuid":"01c3345a-aadb-4e07-a920-947c20d83096","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"emily-citizen-oxford-gba.trycloudflare.com","network":"ws","ws-opts":{"path":"01c3345a-aadb-4e07-a920-947c20d83096-vm","headers":{"host":"emily-citizen-oxford-gba.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_8","type":"vmess","server":"104.19.38.128","port":8080,"cipher":"auto","uuid":"01c3345a-aadb-4e07-a920-947c20d83096","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"emily-citizen-oxford-gba.trycloudflare.com","network":"ws","ws-opts":{"path":"01c3345a-aadb-4e07-a920-947c20d83096-vm","headers":{"host":"emily-citizen-oxford-gba.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_9","type":"vmess","server":"yh3.freeh1.xyz","port":8080,"cipher":"auto","uuid":"01c3345a-aadb-4e07-a920-947c20d83096","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"emily-citizen-oxford-gba.trycloudflare.com","network":"ws","ws-opts":{"path":"01c3345a-aadb-4e07-a920-947c20d83096-vm","headers":{"host":"emily-citizen-oxford-gba.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_10","type":"vmess","server":"yh4.dtku41.xyz","port":8080,"cipher":"auto","uuid":"01c3345a-aadb-4e07-a920-947c20d83096","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"emily-citizen-oxford-gba.trycloudflare.com","network":"ws","ws-opts":{"path":"01c3345a-aadb-4e07-a920-947c20d83096-vm","headers":{"host":"emily-citizen-oxford-gba.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_11","type":"vmess","server":"yh6.dtku41.xyz","port":8080,"cipher":"auto","uuid":"01c3345a-aadb-4e07-a920-947c20d83096","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"emily-citizen-oxford-gba.trycloudflare.com","network":"ws","ws-opts":{"path":"01c3345a-aadb-4e07-a920-947c20d83096-vm","headers":{"host":"emily-citizen-oxford-gba.trycloudflare.com"}}}
+  - {"name":"H1","type":"hysteria","server":"173.234.25.51","port":48919,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
+  - {"name":"H2","type":"hysteria","server":"64.42.176.179","port":50991,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
+  - {"name":"H3","type":"hysteria","server":"51.159.79.103","port":55396,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
+  - {"name":"H4","type":"hysteria","server":"www.dtku40.xyz","port":18091,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - dongtaiwang.com_0
+      - dongtaiwang.com_1
+      - dongtaiwang.com_2
+      - dongtaiwang.com_3
+      - dongtaiwang.com_4
+      - dongtaiwang.com_5
+      - dongtaiwang.com_6
+      - dongtaiwang.com_7
+      - dongtaiwang.com_8
+      - dongtaiwang.com_9
+      - dongtaiwang.com_10
+      - dongtaiwang.com_11
+      - H1
+      - H2
+      - H3
+      - H4
+  - name: 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - dongtaiwang.com_0
+      - dongtaiwang.com_1
+      - dongtaiwang.com_2
+      - dongtaiwang.com_3
+      - dongtaiwang.com_4
+      - dongtaiwang.com_5
+      - dongtaiwang.com_6
+      - dongtaiwang.com_7
+      - dongtaiwang.com_8
+      - dongtaiwang.com_9
+      - dongtaiwang.com_10
+      - dongtaiwang.com_11
+      - H1
+      - H2
+      - H3
+      - H4
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+
+  icloud:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+
+  apple:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+
+  google:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    path: ./ruleset/google.yaml
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+
+  direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+
+  private:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+
+  gfw:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+
+  applications:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
+    path: ./ruleset/applications.yaml
+    interval: 86400
+rules:
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,gfw,PROXY
+  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,google,PROXY
+  - RULE-SET,proxy,PROXY
+  - MATCH,DIRECT
