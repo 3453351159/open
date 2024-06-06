@@ -14,7 +14,8 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - name: dongtaiwang.com_0
+  - {"name":"dongtaiwang.com_0","type":"hysteria","server":"64.42.176.181","port":41604,"sni":"bing.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval":10}
+  - name: dongtaiwang.com_1
     type: ss
     server: 109.104.152.186
     port: 11223
@@ -32,14 +33,14 @@ proxies:
         enabled: true
         up: 11
         down: 55
-  - {"name":"dongtaiwang.com_1","type":"hysteria","server":"108.181.5.21","port":44550,"sni":"bing.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval":10}
-  - {"name":"dongtaiwang.com_2","type":"vmess","server":"104.26.9.16","port":8080,"cipher":"auto","uuid":"4dd80463-21bf-4b95-8cd5-37f1f38cc494","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"playstation-january-rt-semiconductor.trycloudflare.com","network":"ws","ws-opts":{"path":"/argox-vm?ed=2048","headers":{"host":"playstation-january-rt-semiconductor.trycloudflare.com"}}}
-  - {"name":"dongtaiwang.com_3","type":"vmess","server":"104.19.21.44","port":8080,"cipher":"auto","uuid":"4dd80463-21bf-4b95-8cd5-37f1f38cc494","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"playstation-january-rt-semiconductor.trycloudflare.com","network":"ws","ws-opts":{"path":"/argox-vm?ed=2048","headers":{"host":"playstation-january-rt-semiconductor.trycloudflare.com"}}}
-  - {"name":"dongtaiwang.com_4","type":"vmess","server":"104.26.9.51","port":8080,"cipher":"auto","uuid":"4dd80463-21bf-4b95-8cd5-37f1f38cc494","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"playstation-january-rt-semiconductor.trycloudflare.com","network":"ws","ws-opts":{"path":"/argox-vm?ed=2048","headers":{"host":"playstation-january-rt-semiconductor.trycloudflare.com"}}}
-  - {"name":"dongtaiwang.com_5","type":"vmess","server":"104.19.38.128","port":8080,"cipher":"auto","uuid":"4dd80463-21bf-4b95-8cd5-37f1f38cc494","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"playstation-january-rt-semiconductor.trycloudflare.com","network":"ws","ws-opts":{"path":"/argox-vm?ed=2048","headers":{"host":"playstation-january-rt-semiconductor.trycloudflare.com"}}}
-  - {"name":"dongtaiwang.com_6","type":"vmess","server":"yh4.dtku41.xyz","port":8080,"cipher":"auto","uuid":"4dd80463-21bf-4b95-8cd5-37f1f38cc494","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"playstation-january-rt-semiconductor.trycloudflare.com","network":"ws","ws-opts":{"path":"/argox-vm?ed=2048","headers":{"host":"playstation-january-rt-semiconductor.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_2","type":"hysteria","server":"108.181.5.21","port":44550,"sni":"bing.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval":10}
+  - {"name":"dongtaiwang.com_3","type":"vmess","server":"104.26.9.16","port":8080,"cipher":"auto","uuid":"4dd80463-21bf-4b95-8cd5-37f1f38cc494","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"playstation-january-rt-semiconductor.trycloudflare.com","network":"ws","ws-opts":{"path":"/argox-vm?ed=2048","headers":{"host":"playstation-january-rt-semiconductor.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_4","type":"vmess","server":"104.19.21.44","port":8080,"cipher":"auto","uuid":"4dd80463-21bf-4b95-8cd5-37f1f38cc494","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"playstation-january-rt-semiconductor.trycloudflare.com","network":"ws","ws-opts":{"path":"/argox-vm?ed=2048","headers":{"host":"playstation-january-rt-semiconductor.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_5","type":"vmess","server":"104.26.9.51","port":8080,"cipher":"auto","uuid":"4dd80463-21bf-4b95-8cd5-37f1f38cc494","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"playstation-january-rt-semiconductor.trycloudflare.com","network":"ws","ws-opts":{"path":"/argox-vm?ed=2048","headers":{"host":"playstation-january-rt-semiconductor.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_6","type":"vmess","server":"104.19.38.128","port":8080,"cipher":"auto","uuid":"4dd80463-21bf-4b95-8cd5-37f1f38cc494","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"playstation-january-rt-semiconductor.trycloudflare.com","network":"ws","ws-opts":{"path":"/argox-vm?ed=2048","headers":{"host":"playstation-january-rt-semiconductor.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_7","type":"vmess","server":"yh4.dtku41.xyz","port":8080,"cipher":"auto","uuid":"4dd80463-21bf-4b95-8cd5-37f1f38cc494","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"playstation-january-rt-semiconductor.trycloudflare.com","network":"ws","ws-opts":{"path":"/argox-vm?ed=2048","headers":{"host":"playstation-january-rt-semiconductor.trycloudflare.com"}}}
   - {"name":"H1","type":"hysteria","server":"173.234.25.51","port":48919,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
-  - {"name":"H2","type":"hysteria","server":"64.42.176.179","port":50991,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
+  - {"name":"H2","type":"hysteria","server":"64.42.176.181","port":41604,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
   - {"name":"H3","type":"hysteria","server":"51.159.79.103","port":55396,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
   - {"name":"H4","type":"hysteria","server":"www.dtku40.xyz","port":18091,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
 proxy-groups:
@@ -53,6 +54,7 @@ proxy-groups:
       - dongtaiwang.com_4
       - dongtaiwang.com_5
       - dongtaiwang.com_6
+      - dongtaiwang.com_7
       - H1
       - H2
       - H3
@@ -70,6 +72,7 @@ proxy-groups:
       - dongtaiwang.com_4
       - dongtaiwang.com_5
       - dongtaiwang.com_6
+      - dongtaiwang.com_7
       - H1
       - H2
       - H3
