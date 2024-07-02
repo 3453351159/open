@@ -26,20 +26,60 @@ proxies:
     skip-cert-verify: true
     up: "11 Mbps"
     down: "55 Mbps"
-  - {"name":"H1","type":"hysteria","server":"173.234.25.51","port":48919,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
-  - {"name":"H2","type":"hysteria","server":"64.42.176.181","port":41604,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
-  - {"name":"H3","type":"hysteria","server":"51.159.79.103","port":55396,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
-  - {"name":"H4","type":"hysteria","server":"www.dtku40.xyz","port":18091,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
+  - {"name":"H-1","type":"hysteria","server":"173.234.25.51","port":48919,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
+  - {"name":"H-2","type":"hysteria","server":"64.42.176.181","port":41604,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
+  - {"name":"H-3","type":"hysteria","server":"51.159.79.103","port":55396,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
+  - {"name":"H-4","type":"hysteria","server":"www.dtku40.xyz","port":18091,47000-48000",sni":"paypal.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"dongtaiwang.com","up":11,"down":55,"hop_interval": 120}
+  - name: H2-1
+    type: hysteria2
+    server: 64.110.25.11
+    port: 37021
+    password: dongtaiwang.com
+    up: "30 Mbps"
+    down: "200 Mbps"
+    sni: www.bing.com
+    skip-cert-verify: true
+  - name: H2-2
+    type: hysteria2
+    server: 64.42.176.178
+    port: 50690
+    password: dongtaiwang.com
+    up: "30 Mbps"
+    down: "200 Mbps"
+    sni: www.bing.com
+    skip-cert-verify: true
+  - name: H2-3
+    type: hysteria2
+    server: 51.159.77.198
+    port: 20261
+    password: dongtaiwang.com
+    up: "30 Mbps"
+    down: "200 Mbps"
+    sni: www.bing.com
+    skip-cert-verify: true
+  - name: H2-4
+    type: hysteria2
+    server: 46.29.163.85
+    port: 50381
+    password: dongtaiwang.com
+    up: "30 Mbps"
+    down: "200 Mbps"
+    sni: www.bing.com
+    skip-cert-verify: true
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
       - dongtaiwang.com_0
       - dongtaiwang.com_1
-      - H1
-      - H2
-      - H3
-      - H4
+      - H-1
+      - H-2
+      - H-3
+      - H-4
+      - H2-1
+      - H2-2
+      - H2-3
+      - H2-4
   - name: 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -48,10 +88,14 @@ proxy-groups:
     proxies:
       - dongtaiwang.com_0
       - dongtaiwang.com_1
-      - H1
-      - H2
-      - H3
-      - H4
+      - H-1
+      - H-2
+      - H-3
+      - H-4
+      - H2-1
+      - H2-2
+      - H2-3
+      - H2-4
 rule-providers:
   reject:
     type: http
